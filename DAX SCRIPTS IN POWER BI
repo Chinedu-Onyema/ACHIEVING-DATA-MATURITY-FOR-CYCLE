@@ -1,0 +1,9 @@
+DAX (DATA ANALYSIS EXPRESSIONS) SCRIPTS TO CREATE EXPLICIT MEASURES FOR CYCLE
+
+Average_trip_minutes = DIVIDE([trip_minutes], [no_of_neighborhood_end_stations])
+
+no_of_neighborhood_end_stations = DISTINCTCOUNT('entire_year_table(appended_table)'[neighborhood_end_stations])
+
+trip_count = SUM('entire_year_table(appended_table)'[trip_count])
+
+trip_minutes = SUM('entire_year_table(appended_table)'[trip_minutes])
